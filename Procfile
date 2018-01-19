@@ -1,1 +1,0 @@
-web: gunicorn magyartv.wsgi --log-file
