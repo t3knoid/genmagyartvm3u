@@ -1,1 +1,1 @@
-web: gunicorn magyartv.wsgi --log-file
+web: gunicorn magyartv.wsgi
