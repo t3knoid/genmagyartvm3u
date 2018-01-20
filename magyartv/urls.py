@@ -16,7 +16,11 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from . import views
+from django.http import HttpResponseRedirect
+
 urlpatterns = [
+    url(r'^$', lambda r: HttpResponseRedirect('m2tv/')),
 	url(r'^m2tv/', include('m2tv.urls')),
     url(r'^admin/', admin.site.urls),
 ]
