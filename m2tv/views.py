@@ -15,6 +15,7 @@ m5index = 'https://player.mediaklikk.hu/playernew/player.php?video=mtv5live'
 dunaindex = 'https://player.mediaklikk.hu/playernew/player.php?video=dunalive'
 dunawindex = 'https://player.mediaklikk.hu/playernew/player.php?video=dunaworldlive'
 bpeuropeindex = 'http://wdsonline.gdsinfo.com/itplayer/bptv_inc.php'
+sixthchindex = 'http://www.hatoscsatorna.hu/livetv.php'
 
 high_res_m3u = "02.m3u8"
 
