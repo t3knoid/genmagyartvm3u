@@ -14,6 +14,7 @@ m4index = 'https://player.mediaklikk.hu/playernew/player.php?video=mtv4live'
 m5index = 'https://player.mediaklikk.hu/playernew/player.php?video=mtv5live'
 dunaindex = 'https://player.mediaklikk.hu/playernew/player.php?video=dunalive'
 dunawindex = 'https://player.mediaklikk.hu/playernew/player.php?video=dunaworldlive'
+bpeuropeindex = 'http://wdsonline.gdsinfo.com/itplayer/bptv_inc.php'
 
 high_res_m3u = "02.m3u8"
 
