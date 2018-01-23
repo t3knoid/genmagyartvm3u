@@ -14,8 +14,6 @@ m4index = 'https://player.mediaklikk.hu/playernew/player.php?video=mtv4live'
 m5index = 'https://player.mediaklikk.hu/playernew/player.php?video=mtv5live'
 dunaindex = 'https://player.mediaklikk.hu/playernew/player.php?video=dunalive'
 dunawindex = 'https://player.mediaklikk.hu/playernew/player.php?video=dunaworldlive'
-bpeuropeindex = 'http://wdsonline.gdsinfo.com/itplayer/bptv_inc.php'
-sixthchindex = 'http://www.hatoscsatorna.hu/livetv.php'
 
 high_res_m3u = "02.m3u8"
 
@@ -31,7 +29,7 @@ def index(request):
     dunawtvfeed = getm3u(dunawindex)
     citytvfeed = "https://citytv.hu/media/live/stream.m3u8"
 
-    message = """#EXTM3U\n#EXTINF: 1,Magyar M1\n%s\n#EXTINF: 2,Magyar M2\n%s\n#EXTINF: 3, Magyar M4\n%s\n#EXTINF: 4, Magyar M5\n%s\n#EXTINF: 5, Magyar Duna World\n%s\n#EXTINF: 6, Magyar Duna Live (Danube)\n%s\n,#EXTINF: 7, CityTV\n%s\n"""
+    message = """#EXTM3U\n#EXTINF: 1,Magyar M1\n%s\n#EXTINF: 2,Magyar M2\n%s\n#EXTINF: 3, Magyar M4\n%s\n#EXTINF: 4, Magyar M5\n%s\n#EXTINF: 5, Magyar Duna World\n%s\n#EXTINF: 6, Magyar Duna Live (Danube)\n%s\n#EXTINF: 7, CityTV\n%s\n"""
     return HttpResponse(message % (m1tvfeed, m2tvfeed, m4tvfeed, m5tvfeed, dunatvfeed, dunawtvfeed, citytvfeed))
 
 def getm3u(index):
