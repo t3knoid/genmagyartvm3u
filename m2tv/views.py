@@ -25,7 +25,7 @@ high_res_m3u = "02.m3u8"
 def index(request):
     m1tvfeed = getm3u(m1index)
     m2tvfeed = getm3u(m2index)
-    m4tvfeed = getm3u(m4index)
+    # m4tvfeed = getm3u(m4index) # Stopped working 02/19/18 contains region check
     m5tvfeed = getm3u(m5index)
     dunatvfeed = getm3u(dunaindex)
     dunawtvfeed = getm3u(dunawindex)
