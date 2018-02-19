@@ -33,8 +33,11 @@ def index(request):
     bpeurope =  getbpeuropem3u(bpeuropeindex)
     hatoscsatorna = gethatoscsatornam3u(hatoscsatornaindex)
 
-    message = """#EXTM3U\n#EXTINF: 1,Magyar M1\n%s\n#EXTINF: 2,Magyar M2\n%s\n#EXTINF: 3, Magyar M4\n%s\n#EXTINF: 4, Magyar M5\n%s\n#EXTINF: 5, Magyar Duna World\n%s\n#EXTINF: 6, Magyar Duna Live (Danube)\n%s\n#EXTINF: 7, City TV\n%s\n#EXTINF: 8, BP Europe\n%s\n#EXTINF: 9, Hatoscsatorna\n%s\n"""
-    return HttpResponse(message % (m1tvfeed, m2tvfeed, m4tvfeed, m5tvfeed, dunatvfeed, dunawtvfeed, citytvfeed, bpeurope, hatoscsatorna))
+    #message = """#EXTM3U\n#EXTINF: 1,Magyar M1\n%s\n#EXTINF: 2,Magyar M2\n%s\n#EXTINF: 3, Magyar M4\n%s\n#EXTINF: 4, Magyar M5\n%s\n#EXTINF: 5, Magyar Duna World\n%s\n#EXTINF: 6, Magyar Duna Live (Danube)\n%s\n#EXTINF: 7, City TV\n%s\n#EXTINF: 8, BP Europe\n%s\n#EXTINF: 9, Hatoscsatorna\n%s\n"""
+    #return HttpResponse(message % (m1tvfeed, m2tvfeed, m4tvfeed, m5tvfeed, dunatvfeed, dunawtvfeed, citytvfeed, bpeurope, hatoscsatorna))
+    message = """#EXTM3U\n#EXTINF: 1,Magyar M1\n%s\n#EXTINF: 2,Magyar M2\n%s\n#EXTINF: 3, Magyar M5\n%s\n#EXTINF: 5, Magyar Duna World\n%s\n#EXTINF: 6, Magyar Duna Live (Danube)\n%s\n#EXTINF: 7, City TV\n%s\n#EXTINF: 8, BP Europe\n%s\n#EXTINF: 9, Hatoscsatorna\n%s\n"""
+    return HttpResponse(message % (m1tvfeed, m2tvfeed, m5tvfeed, dunatvfeed, dunawtvfeed, citytvfeed, bpeurope, hatoscsatorna))
+
 
 def getm3u(index):
     # Read index feed
