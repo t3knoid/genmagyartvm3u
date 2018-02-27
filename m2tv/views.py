@@ -27,7 +27,7 @@ direct_channels = {
 }
 
 # Create your views here.
-T
+
 ################################################################################################
 # This creates an index file that is an M3U file
 # #EXTM3U
