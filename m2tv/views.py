@@ -49,12 +49,12 @@ direct_channels = {
 # http://87.229.77.131:8081/Hatoscsatorna/livestream/playlist.m3u8
 ################################################################################################
 def index(request):
-    m1tvfeed = getm3u(mediaklikk_channels['Magyar M1'])
-    m2tvfeed = getm3u(mediaklikk_channels['Magyar M2'])
+    m1tvfeed = getm3u(get_vidsrc('/html/body/script[3]/text()',mediaklikk_channels['Magyar M1']))
+    m2tvfeed = getm3u(get_vidsrc('/html/body/script[3]/text()',mediaklikk_channels['Magyar M2']))
     # m4tvfeed = getm3u(m4index) # Stopped working 02/19/18 contains region check
-    m5tvfeed = getm3u(mediaklikk_channels['Magyar M5'])
-    dunatvfeed = getm3u(mediaklikk_channels['Magyar Duna'])
-    dunawtvfeed = getm3u(mediaklikk_channels['Magyar Duna World'])
+    m5tvfeed = getm3u(get_vidsrc('/html/body/script[3]/text()',mediaklikk_channels['Magyar M5']))
+    dunatvfeed = getm3u(get_vidsrc('/html/body/script[3]/text()',mediaklikk_channels['Magyar Duna']))
+    dunawtvfeed = getm3u(get_vidsrc('/html/body/script[3]/text()',mediaklikk_channels['Magyar Duna World']))
     citytvfeed = "https://citytv.hu/media/live/stream.m3u8"
     #bpeurope =  get_vidsrc('http://wdsonline.gdsinfo.com/itplayer/bptv_inc.php','//*[@id="xplayer"]/source[1]').attrib['src'] #Stopped working 02/26/18
     hatoscsatorna = get_vidsrc('http://www.hatoscsatorna.hu/livetv.php','//*[@id="content"]/div/video/source').attrib['src']
