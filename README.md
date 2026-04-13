@@ -1,5 +1,18 @@
 # 📺 genmagyartvm3u  
 
+## 20/04/2026 Active fork
+
+### Changes
+ - Migrated to Python 3
+ - Fixed a bug where parameters were transposed in the main logic causing the code to fail
+ - Added support for Duna and M4 Sport channels by adding `referrer` to `GET` (M4 Sport still has some programmes that are region locked)
+ - Removed channels that were returning 404
+ - Fixed time value in playlist
+ - Removed references to discontinued `high_res_m3u` 
+
+ > There may be breaking changes to Heroku. Actively used with Docker image python:3.12-slim 
+---
+
 ### _Hungarian TV M3U Generator (Django-based scraper)_
 
 `genmagyartvm3u` is a lightweight Django application that scrapes live Hungarian TV stream metadata from **mediaklikk.hu** and exposes it as an **M3U playlist**. The generated playlist can be consumed by IPTV clients such as **Kodi’s PVR IPTV Simple Client**, VLC, or any M3U‑compatible player. Originally built for Heroku, the project can now be deployed on any container‑friendly platform or run locally with minimal setup.
@@ -52,7 +65,7 @@ pip install -r requirements.txt
 
 ### 4. Run the Django server
 ```bash
-python manage.py runserver
+python3 manage.py runserver
 ```
 
 ### 5. Access the M3U feed
